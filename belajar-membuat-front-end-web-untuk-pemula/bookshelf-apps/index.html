@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookshelf App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Bookshelf App</h1>
+  <form id="book-form">
+    <input type="text" id="title" placeholder="Judul" required>
+    <input type="text" id="author" placeholder="Penulis" required>
+    <input type="number" id="year" placeholder="Tahun" required>
+    <label>
+      <input type="checkbox" id="isComplete"> Selesai dibaca
+    </label>
+    <button type="submit">Tambah</button>
+  </form>
+
+  <input type="text" id="search" placeholder="Cari">
+
+  <div>
+    <h2>Belum selesai dibaca</h2>
+    <div id="incomplete-bookshelf"></div>
+  </div>
+  <div>
+    <h2>Selesai dibaca</h2>
+    <div id="complete-bookshelf"></div>
+  </div>
+
+  <div id="edit-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Edit Buku</h2>
+      <form id="edit-book-form">
+        <input type="hidden" id="edit-id">
+        <input type="text" id="edit-title" placeholder="Judul" required>
+        <input type="text" id="edit-author" placeholder="Penulis" required>
+        <input type="number" id="edit-year" placeholder="Tahun" required>
+        <label>
+          <input type="checkbox" id="edit-isComplete"> Selesai dibaca
+        </label>
+        <button type="submit">Simpan</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="delete-modal" class="modal">
+    <div class="modal-content">
+      <h2>Konfirmasi Hapus Buku</h2>
+      <p>Apakah Anda yakin ingin menghapus buku ini?</p>
+      <button id="confirm-delete" class="delete-button">Hapus</button>
+      <button id="cancel-delete" class="close delete-button">Batal</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

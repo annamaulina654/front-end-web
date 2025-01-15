@@ -1,0 +1,220 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(to right, #ece9e6, #ffffff);
+    color: #333;
+}
+  
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+  
+h2 {
+    margin-bottom: 20px;
+    font-size: 1.75em;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    color: #444;
+}
+  
+form,
+#search {
+    margin-bottom: 20px;
+}
+  
+form input,
+form button,
+#search {
+    display: block;
+    margin-bottom: 10px;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#title,
+#author,
+#year {
+    width: 100%;
+}
+
+#search {
+    width: 98.5%;
+}
+  
+form button {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+form button:hover {
+    background-color: #45a049;
+}
+  
+form label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+  
+form label input[type="checkbox"] {
+    margin-right: 10px;
+}
+  
+#incomplete-bookshelf,
+#complete-bookshelf {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+  
+.book-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+  
+.book-item:last-child {
+    border-bottom: none;
+}
+  
+.book-item button {
+    margin-left: 5px;
+    padding: 10px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+.book-item button:first-child {
+    background-color: #f0ad4e;
+    color: white;
+}
+  
+.book-item button:first-child:hover {
+    background-color: #ec971f;
+}
+  
+.book-item button:last-child {
+    background-color: #d9534f;
+    color: white;
+}
+  
+.book-item button:last-child:hover {
+    background-color: #c9302c;
+}
+  
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+  
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+#edit-title,
+#edit-author,
+#edit-year {
+    width: 94.5%;
+}
+  
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+  
+#confirm-delete,
+#cancel-delete {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+#confirm-delete {
+    background-color: #d9534f;
+    color: white;
+}
+  
+#confirm-delete:hover {
+    background-color: #c9302c;
+}
+  
+#cancel-delete {
+    background-color: #5bc0de;
+    color: white;
+}
+  
+#cancel-delete:hover {
+    background-color: #31b0d5;
+}
+  
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+  
+#search {
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+  
+.book-item {
+    transition: background-color 0.3s ease;
+}
+  
+.book-item:hover {
+    background-color: #f9f9f9;
+}

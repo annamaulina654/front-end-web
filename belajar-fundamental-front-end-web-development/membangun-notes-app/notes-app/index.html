@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Notes App</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <style>
+      .validation-message {
+        margin-block-start: 0.5rem;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <app-bar></app-bar>
+    </header>
+
+    <div class="popup-box">
+      <div class="popup">
+        <div class="content">
+          <header>
+            <p></p>
+            <i class="uil uil-times"></i>
+          </header>
+          <form action="#">
+            <div class="row title">
+              <label for="title">Judul</label>
+              <input
+                type="text"
+                id="title"
+                name="title"
+                minlength="5"
+                aria-describedby="titleValidation"
+              />
+              <p
+                id="titleValidation"
+                class="validation-message"
+                aria-live="polite"
+              ></p>
+            </div>
+            <div class="row description">
+              <label for="description">Deskripsi / Isi</label>
+              <textarea
+                id="description"
+                name="description"
+                minlength="10"
+                spellcheck="false"
+                aria-describedby="descriptionValidation"
+              ></textarea>
+              <p
+                id="descriptionValidation"
+                class="validation-message"
+                aria-live="polite"
+              ></p>
+            </div>
+            <button></button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <add-note class="add-box" cursor="pointer"></add-note>
+
+      <note-list></note-list>
+    </div>
+
+    <footer>
+      <footer-bar
+        color="#ffffff"
+        background-color="#424874"
+        display="block"
+        box-shadow="0 -4px 4px 0 rgba(0, 0, 0, 0.2)"
+      ></footer-bar>
+    </footer>
+
+    <script src="script.js"></script>
+    <script type="module" src="/components/index.js"></script>
+  </body>
+</html>
