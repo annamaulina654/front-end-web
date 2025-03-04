@@ -1,0 +1,52 @@
+
+@use 'variables' as *;
+
+@mixin button-style($bg, $hover-bg) {
+  background-color: $bg;
+  color: $text-dark;
+  font-weight: bold;
+  border: 1px solid $border-color;
+  box-shadow: $box-shadow;
+
+  &:hover {
+    background-color: $hover-bg;
+    color: #FFFFFF;
+    transition: $transition;
+  }
+}
+
+@mixin form-style($border-color, $bg-color) {
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  padding: 10px 15px;
+  background-color: $bg-color;
+  color: $text-dark;
+  transition: border $transition, box-shadow $transition;
+
+  &:focus {
+    border: 1px solid $hover-color;
+    box-shadow: $shadow-focus;
+  }
+
+  &::placeholder {
+    color: $placeholder-color;
+    font-style: italic;
+  }
+
+  &:disabled {
+    background-color: $disabled-color;
+    border: 1px solid $primary-color;
+  }
+}
+
+@mixin select-style($width, $bg-color, $padding) {
+  width: $width;
+  background-color: $bg-color;
+  cursor: $cursor-pointer;
+  padding: $padding;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $option-hover;
+  }
+}

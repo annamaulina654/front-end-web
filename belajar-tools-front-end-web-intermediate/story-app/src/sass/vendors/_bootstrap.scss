@@ -1,0 +1,107 @@
+// ==================================================
+// Bootstrap
+// ==================================================
+
+// Using built-in modules
+@use 'sass:map';
+
+// Custom modules
+@use '../vendors-extensions/components/colors' as color;
+@use '../vendors-extensions/abstracts/mixins' as * ;
+@use '../vendors-extensions/abstracts/variables' as * ;
+
+//
+// Functions Bootstrap
+//
+@import '~bootstrap/scss/functions';
+
+//
+// Variables Bootstrap
+//
+@import '~bootstrap/scss/variables';
+
+// Menerapkan/override variables Bootstrap apa pun di sini
+// Menggabungkan warna tema
+$theme-colors: map.deep-merge($theme-colors, color.$theme-colors);
+
+//
+// Konfigurasi Bootstrap
+//
+@import '~bootstrap/scss/maps';
+@import '~bootstrap/scss/mixins';
+@import '~bootstrap/scss/root';
+@import '~bootstrap/scss/utilities';
+@import '~bootstrap/scss/reboot';
+
+//
+// Layouts dan components
+//
+@import '~bootstrap/scss/type';
+@import '~bootstrap/scss/images';
+@import '~bootstrap/scss/containers';
+@import '~bootstrap/scss/grid';
+
+@import '~bootstrap/scss/helpers';
+
+// Komponen-Komponen
+@import '~bootstrap/scss/tables';
+@import '~bootstrap/scss/forms';
+@import '~bootstrap/scss/buttons';
+@import '~bootstrap/scss/transitions';
+@import '~bootstrap/scss/transitions';
+@import '~bootstrap/scss/dropdown';
+@import '~bootstrap/scss/nav';
+@import '~bootstrap/scss/navbar'; 
+@import '~bootstrap/scss/offcanvas';
+@import '~bootstrap/scss/card';
+@import '~bootstrap/scss/close';
+@import '~bootstrap/scss/modal'; 
+
+//
+// Utilities API untuk menghasilkan utility classes
+//
+@import '~bootstrap/scss/utilities/api';
+
+//
+// Tambahkan custom code di sini
+//
+.navbar {
+  color: black !important;
+  
+  .navbar-brand,
+  .nav-link {
+    color: black !important;
+  }
+}
+
+.btn-yellow {
+  @include button-style($primary-yellow, $hover-yellow);
+}
+
+.btn-purple {
+  @include button-style($primary-purple, $hover-purple);
+}
+
+.form-control {
+  @include form-style($primary-color, $disabled-color);
+
+  &.is-invalid {
+    border: 1px solid $invalid-color;
+    background-color: lighten($invalid-color, 40%);
+  }
+}
+
+locale-picker {
+  select.form-select {
+    @include select-style($select-width, $soft-pink, $select-padding);
+
+    option {
+      width: auto;
+
+      &:hover {
+        background-color: $option-hover; 
+        color: $text-dark;            
+      }
+    }
+  }
+}

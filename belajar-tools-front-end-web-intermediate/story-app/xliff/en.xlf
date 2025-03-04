@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+<file target-language="en" source-language="id" original="lit-localize-inputs" datatype="plaintext">
+<body>
+<trans-unit id="sae5a4dc4ddb91f96">
+  <source>Detail Cerita</source>
+  <target>Story Details</target>
+</trans-unit>
+<trans-unit id="s749c72374d54863f">
+  <source>Tutup</source>
+  <target>Close</target>
+</trans-unit>
+<trans-unit id="sf9a862bfd829397e">
+  <source>Dasbor</source>
+  <target>Dashboard</target>
+</trans-unit>
+<trans-unit id="saca1bb9c1da8e7da">
+  <source>Tambah Cerita</source>
+  <target>Add Story</target>
+</trans-unit>
+<trans-unit id="s0d7ffd6b0c653940">
+  <source>Tentang</source>
+  <target>About</target>
+</trans-unit>
+<trans-unit id="sbb9f18393a4c86dc">
+  <source>Temukan dan bagikan cerita yang menginspirasi.</source>
+  <target>Discover and share inspiring stories.</target>
+</trans-unit>
+<trans-unit id="sb083416229bc664b">
+  <source>2025 Anna Maulina. Semua hak dilindungi.</source>
+  <target>2025 Anna Maulina. All rights reserved.</target>
+</trans-unit>
+</body>
+</file>
+</xliff>
